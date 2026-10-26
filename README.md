@@ -10,17 +10,26 @@ Speech recognition with grammar correction for **Hindi, Marathi, Bengali, Punjab
 | Marathi | 1.7 s | **0.35 s** | 27.0% | **15.5%** |
 | Punjabi | 1.5 s | **0.22 s** | 23.7% | **15.9%** |
 | English (Indian accent) | 1.3 s | **0.95 s** | 13.0% | **4.9%** |
-| Bengali | same engine (Google, see below) | | 16.7% | 16.7% |
+| Bengali | – | uses Google (see below) | 16.7% | 16.7% (same engine) |
 
 Time = from the end of the recording to the text (median, M4 MacBook Air). Word errors on 30 FLEURS clips per language (60 Indian-accented clips for English). Hindi, Marathi, Punjabi and English are recognised on your Mac, without internet. Every number below was measured with the scripts in `eval/`.
 
 ## How it works
 
 ```
-microphone ─► WAV (16 kHz mono) ─► speech recognition ─► Stage 1: spelling + grammar rules ─► Stage 2: large LLM ─► corrections ─► Speak Back
-  (you pick the language)          (on the Mac)            (shown at once, ~0 ms)           (Groq → Gemini, free)
-                                      │
-                      nothing heard? ─┘─► noise reduction + VAD ─► recognise again
+ 🎤 microphone  (you pick the language)
+     │
+     ▼
+ speech recognition ── on the Mac (IndicConformer / Whisper; Google for Bengali)
+     │                 nothing heard? → noise reduction + VAD → recognise again
+     ▼
+ Stage 1: spelling + grammar rules ── ~0 ms, shown on screen at once
+     │
+     ▼
+ Stage 2: large LLM ── Groq → Gemini (free tiers), checked before use
+     │
+     ▼
+ corrections (accept / reject each one)  →  🔊 Speak Back
 ```
 
 | Step | What happens | Tool |
