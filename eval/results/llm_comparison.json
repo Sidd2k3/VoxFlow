@@ -1,0 +1,21 @@
+{
+  "baseline": {
+    "en-US": 32.98,
+    "hi-IN": 88.78,
+    "bn-IN": 95.25
+  },
+  "models": {
+    "llama3.2": {
+      "en-US": 47.58,
+      "hi-IN": 88.13,
+      "bn-IN": 93.4,
+      "median_ms": 1128
+    },
+    "gemma3:12b": {
+      "en-US": 49.8,
+      "hi-IN": 88.86,
+      "bn-IN": 93.96,
+      "median_ms": 7306
+    }
+  }
+}

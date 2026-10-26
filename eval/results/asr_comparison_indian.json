@@ -1,0 +1,68 @@
+{
+  "google": {
+    "hi-IN": {
+      "wer": 0.1746,
+      "cer": 0.0763,
+      "median_ms": 3591
+    },
+    "mr-IN": {
+      "wer": 0.2697,
+      "cer": 0.0818,
+      "median_ms": 3999
+    },
+    "bn-IN": {
+      "wer": 0.1667,
+      "cer": 0.0404,
+      "median_ms": 3726
+    },
+    "pa-IN": {
+      "wer": 0.2371,
+      "cer": 0.0892,
+      "median_ms": 3363
+    }
+  },
+  "indicconformer": {
+    "hi-IN": {
+      "wer": 0.1172,
+      "cer": 0.0455,
+      "median_ms": 243
+    },
+    "mr-IN": {
+      "wer": 0.1793,
+      "cer": 0.0379,
+      "median_ms": 230
+    },
+    "bn-IN": {
+      "wer": 0.1305,
+      "cer": 0.0333,
+      "median_ms": 249
+    },
+    "pa-IN": {
+      "wer": 0.1589,
+      "cer": 0.057,
+      "median_ms": 222
+    }
+  },
+  "indicconformer:rnnt": {
+    "hi-IN": {
+      "wer": 0.111,
+      "cer": 0.0479,
+      "median_ms": 320
+    },
+    "mr-IN": {
+      "wer": 0.1546,
+      "cer": 0.0352,
+      "median_ms": 312
+    },
+    "bn-IN": {
+      "wer": 0.1336,
+      "cer": 0.0307,
+      "median_ms": 350
+    },
+    "pa-IN": {
+      "wer": 0.1629,
+      "cer": 0.057,
+      "median_ms": 310
+    }
+  }
+}

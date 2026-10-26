@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VoxFlow</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <div class="layout">
+
+    <!-- Left: navigation -->
+    <nav class="sidebar">
+      <div class="brand">VoxFlow</div>
+      <button class="nav-link active" data-page="dashboard">Dashboard</button>
+      <button class="nav-link" data-page="record">Speech Input</button>
+      <button class="nav-link" data-page="output">Text Output</button>
+      <button class="nav-link" data-page="speak">Speak Back</button>
+      <button class="nav-link" data-page="settings">Settings</button>
+    </nav>
+
+    <!-- Middle: the pages (only one is visible at a time) -->
+    <main class="content">
+
+      <!-- Dashboard -->
+      <section id="page-dashboard" class="page active">
+        <h1>VoxFlow</h1>
+        <p class="muted">Multilingual speech recognition with two-stage correction</p>
+
+        <h2>System status</h2>
+        <div id="status-cards" class="cards"><p class="muted">Checking…</p></div>
+
+        <h2>Supported languages</h2>
+        <div id="language-list" class="chips"></div>
+
+        <h2>Benchmark (measured on FLEURS test audio)</h2>
+        <div id="benchmark"><p class="muted">Loading…</p></div>
+
+        <h2>Recent sessions</h2>
+        <div id="recent-sessions"></div>
+      </section>
+
+      <!-- Speech Input -->
+      <section id="page-record" class="page">
+        <h1>Speech Input</h1>
+        <p class="muted">Press the button or hit <kbd>R</kbd> to start and stop recording.</p>
+
+        <div class="row">
+          <label for="record-language">Language</label>
+          <select id="record-language" class="language-select"></select>
+        </div>
+
+        <div class="recorder">
+          <button id="record-button" class="record-button" aria-label="Start recording">●</button>
+          <canvas id="waveform" width="300" height="48"></canvas>
+          <div id="timer" class="timer">00:00</div>
+          <div id="record-status" class="muted">Idle</div>
+          <button id="clear-recording" class="secondary" disabled>Clear recording</button>
+        </div>
+
+        <div class="card">
+          <h3>Microphone not working? Type instead</h3>
+          <textarea id="text-input" rows="4" placeholder="Type or paste text to correct…"></textarea>
+          <button id="text-submit">Correct text</button>
+        </div>
+      </section>
+
+      <!-- Text Output -->
+      <section id="page-output" class="page">
+        <h1>Text Output</h1>
+        <div id="output-empty" class="muted">No session yet. Record or type something first.</div>
+        <div id="output-body" hidden>
+          <p id="detected-language" class="detected"></p>
+          <div class="row">
+            <button id="copy-text" class="secondary">Copy corrected text</button>
+            <button id="export-json" class="secondary">Export snapshot (JSON)</button>
+          </div>
+          <div class="two-col">
+            <div class="card">
+              <h3>Raw transcription</h3>
+              <p id="raw-text" class="mono"></p>
+            </div>
+            <div class="card">
+              <h3>Corrected text</h3>
+              <p id="final-text"></p>
+            </div>
+          </div>
+          <p id="stage2-note" class="muted"></p>
+          <div id="recording-box" class="card" hidden>
+            <h3>Your recording</h3>
+            <p class="muted small">Exactly the audio that was sent for recognition.</p>
+            <audio id="recording-player" controls></audio>
+            <a id="recording-download" download="my-recording.wav">Download my-recording.wav</a>
+          </div>
+          <div class="card">
+            <h3>Corrections</h3>
+            <p class="muted small">Reject a correction to put the original words back.</p>
+            <div id="corrections"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Speak Back -->
+      <section id="page-speak" class="page">
+        <h1>Speak Back</h1>
+        <div id="speak-empty" class="muted">No session yet. Record or type something first.</div>
+        <div id="speak-body" class="card" hidden>
+          <p id="speak-text"></p>
+          <p id="speak-status" class="muted"></p>
+          <audio id="player" controls></audio>
+          <div class="row">
+            <span class="muted">Speed</span>
+            <button class="speed secondary" data-speed="0.5">0.5x</button>
+            <button class="speed secondary active" data-speed="1">1x</button>
+            <button class="speed secondary" data-speed="1.5">1.5x</button>
+            <button class="speed secondary" data-speed="2">2x</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Settings -->
+      <section id="page-settings" class="page">
+        <h1>Settings</h1>
+        <div class="card row-between">
+          <div>
+            <h3>Correction language</h3>
+            <p class="muted small">Used for speech input, correction and the Speak Back voice.</p>
+          </div>
+          <select id="settings-language" class="language-select"></select>
+        </div>
+        <div class="card row-between">
+          <div>
+            <h3>Auto Speak Back</h3>
+            <p class="muted small">Go straight to Speak Back after processing.</p>
+          </div>
+          <input id="auto-speak" type="checkbox">
+        </div>
+        <div class="card">
+          <div class="row-between">
+            <h3>Correction intensity</h3>
+            <span id="intensity-value"></span>
+          </div>
+          <input id="intensity" type="range" min="0" max="100" step="1">
+          <p id="intensity-help" class="muted small"></p>
+        </div>
+        <div class="card">
+          <h3>Sessions</h3>
+          <p id="session-count" class="muted small"></p>
+          <button id="clear-sessions" class="danger">Clear all sessions</button>
+        </div>
+      </section>
+    </main>
+
+    <!-- Right: insights for the current session -->
+    <aside class="insights">
+      <h2>Insights</h2>
+      <div id="insights"><p class="muted">Record a session to see insights.</p></div>
+    </aside>
+  </div>
+
+  <div id="toast" class="toast" hidden></div>
+  <script src="/static/app.js"></script>
+</body>
+</html>

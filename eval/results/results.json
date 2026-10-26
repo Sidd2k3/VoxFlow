@@ -1,0 +1,159 @@
+{
+  "dataset": "FLEURS test split (Google)",
+  "asr": {
+    "en-US": "mlx:large-v3-turbo:fast",
+    "hi-IN": "indicconformer:rnnt",
+    "mr-IN": "indicconformer:rnnt",
+    "bn-IN": "google",
+    "pa-IN": "indicconformer:ctc"
+  },
+  "model": "llama3.2",
+  "intensity": 50,
+  "date": "2026-10-26",
+  "per_language": {
+    "en-US": {
+      "n": 30,
+      "wer": {
+        "asr": 0.0569,
+        "stage1": 0.0569,
+        "stage2": 0.0738,
+        "full": 0.0738
+      },
+      "cer": {
+        "asr": 0.0313,
+        "stage1": 0.0313,
+        "stage2": 0.0412,
+        "full": 0.0412
+      },
+      "empty_asr": 0,
+      "clips_with_alternatives": 0,
+      "llm_edits": {
+        "kept": 14,
+        "reverted": 11
+      },
+      "stage2_status": {
+        "applied": 18,
+        "rejected": 1,
+        "unchanged": 11
+      },
+      "latency_ms": {
+        "asr_median": 983.5,
+        "stage2_median": 737.0
+      }
+    },
+    "hi-IN": {
+      "n": 30,
+      "wer": {
+        "asr": 0.111,
+        "stage1": 0.111,
+        "stage2": 0.1172,
+        "full": 0.1172
+      },
+      "cer": {
+        "asr": 0.0479,
+        "stage1": 0.0479,
+        "stage2": 0.0504,
+        "full": 0.0504
+      },
+      "empty_asr": 0,
+      "clips_with_alternatives": 0,
+      "llm_edits": {
+        "kept": 7,
+        "reverted": 8
+      },
+      "stage2_status": {
+        "applied": 20,
+        "unchanged": 10
+      },
+      "latency_ms": {
+        "asr_median": 386.0,
+        "stage2_median": 1624.5
+      }
+    },
+    "mr-IN": {
+      "n": 30,
+      "wer": {
+        "asr": 0.1546,
+        "stage1": 0.1546,
+        "stage2": 0.1562,
+        "full": 0.1562
+      },
+      "cer": {
+        "asr": 0.0352,
+        "stage1": 0.0352,
+        "stage2": 0.0357,
+        "full": 0.0357
+      },
+      "empty_asr": 0,
+      "clips_with_alternatives": 0,
+      "llm_edits": {
+        "kept": 2,
+        "reverted": 12
+      },
+      "stage2_status": {
+        "applied": 23,
+        "unchanged": 7
+      },
+      "latency_ms": {
+        "asr_median": 396.5,
+        "stage2_median": 1883.0
+      }
+    },
+    "bn-IN": {
+      "n": 30,
+      "wer": {
+        "asr": 0.1667,
+        "stage1": 0.1667,
+        "stage2": 0.1714,
+        "full": 0.1667
+      },
+      "cer": {
+        "asr": 0.0404,
+        "stage1": 0.0404,
+        "stage2": 0.041,
+        "full": 0.0404
+      },
+      "empty_asr": 0,
+      "clips_with_alternatives": 26,
+      "llm_edits": {
+        "kept": 0,
+        "reverted": 0
+      },
+      "stage2_status": {
+        "skipped": 30
+      },
+      "latency_ms": {
+        "asr_median": 3716.5,
+        "stage2_median": 0.0
+      }
+    },
+    "pa-IN": {
+      "n": 30,
+      "wer": {
+        "asr": 0.1589,
+        "stage1": 0.1576,
+        "stage2": 0.1629,
+        "full": 0.1576
+      },
+      "cer": {
+        "asr": 0.057,
+        "stage1": 0.0564,
+        "stage2": 0.0589,
+        "full": 0.0564
+      },
+      "empty_asr": 0,
+      "clips_with_alternatives": 0,
+      "llm_edits": {
+        "kept": 0,
+        "reverted": 0
+      },
+      "stage2_status": {
+        "skipped": 30
+      },
+      "latency_ms": {
+        "asr_median": 264.5,
+        "stage2_median": 0.0
+      }
+    }
+  }
+}

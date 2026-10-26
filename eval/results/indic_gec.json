@@ -1,0 +1,26 @@
+{
+  "dataset": "IndicGEC 2025 test",
+  "commit": "b460f85689ac863adfce14f489fafd1db6ceac46",
+  "model": "llama3.2",
+  "intensity": 50,
+  "metric": "shared-task GLEU",
+  "results": {
+    "hi-IN": {
+      "source": 80.74,
+      "stage1": 81.29,
+      "stage2": 82.17,
+      "full": 82.22,
+      "llm_raw": 80.62,
+      "sentences": 236
+    },
+    "bn-IN": {
+      "source": 95.79,
+      "stage1": 95.85,
+      "stage2": 94.21,
+      "full": 95.85,
+      "llm_raw": 90.82,
+      "sentences": 330
+    }
+  },
+  "minutes": 0.4
+}

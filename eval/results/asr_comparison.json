@@ -1,0 +1,83 @@
+{
+  "google": {
+    "en-US": {
+      "wer": 0.3462,
+      "cer": 0.2245,
+      "median_ms": 3177
+    },
+    "hi-IN": {
+      "wer": 0.1746,
+      "cer": 0.0763,
+      "median_ms": 3591
+    },
+    "mr-IN": {
+      "wer": 0.2697,
+      "cer": 0.0818,
+      "median_ms": 3999
+    },
+    "bn-IN": {
+      "wer": 0.1667,
+      "cer": 0.0404,
+      "median_ms": 3726
+    },
+    "pa-IN": {
+      "wer": 0.2371,
+      "cer": 0.0892,
+      "median_ms": 3363
+    }
+  },
+  "whisper:small": {
+    "en-US": {
+      "wer": 0.0846,
+      "cer": 0.0377,
+      "median_ms": 1284
+    },
+    "hi-IN": {
+      "wer": 0.5773,
+      "cer": 0.2884,
+      "median_ms": 3444
+    },
+    "mr-IN": {
+      "wer": 1.0855,
+      "cer": 0.4853,
+      "median_ms": 4204
+    },
+    "bn-IN": {
+      "wer": 1.1903,
+      "cer": 1.0307,
+      "median_ms": 9431
+    },
+    "pa-IN": {
+      "wer": 1.0252,
+      "cer": 1.0257,
+      "median_ms": 26191
+    }
+  },
+  "whisper:large-v3-turbo": {
+    "en-US": {
+      "wer": 0.06,
+      "cer": 0.0294,
+      "median_ms": 5790
+    },
+    "hi-IN": {
+      "wer": 0.298,
+      "cer": 0.1132,
+      "median_ms": 8740
+    },
+    "mr-IN": {
+      "wer": 0.7961,
+      "cer": 0.2564,
+      "median_ms": 8898
+    },
+    "bn-IN": {
+      "wer": 0.8459,
+      "cer": 0.3965,
+      "median_ms": 10512
+    },
+    "pa-IN": {
+      "wer": 0.8795,
+      "cer": 0.4652,
+      "median_ms": 10815
+    }
+  }
+}

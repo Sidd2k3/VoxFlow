@@ -1,0 +1,36 @@
+{
+  "dataset": "JFLEG test, 747 sentences (dev = 1-300, held-out = 301-747)",
+  "model": "llama3.2",
+  "metric": "GLEU (higher is better)",
+  "scores": {
+    "source": 44.04,
+    "stage1": 44.55,
+    "stage2": 58.44,
+    "full": 58.52,
+    "llm_raw": 61.79
+  },
+  "splits": {
+    "held_out": {
+      "source": 44.04,
+      "stage1": 44.55,
+      "stage2": 58.44,
+      "full": 58.52,
+      "llm_raw": 61.79
+    },
+    "dev": {
+      "source": 38.48,
+      "stage1": 39.21,
+      "stage2": 54.64,
+      "full": 55.02,
+      "llm_raw": 58.7
+    },
+    "all": {
+      "source": 41.78,
+      "stage1": 42.38,
+      "stage2": 56.88,
+      "full": 57.08,
+      "llm_raw": 60.51
+    }
+  },
+  "minutes": 0.1
+}

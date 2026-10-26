@@ -1,0 +1,9 @@
+[
+  {"input": "she don't know where is the station", "output": "She doesn't know where the station is."},
+  {"input": "i have saw this movie two time", "output": "I have seen this movie two times."},
+  {"input": "the weather are very nice today", "output": "The weather is very nice today."},
+  {"input": "can you tell me how much it cost", "output": "Can you tell me how much it costs?"},
+  {"input": "Last week my sister buy a new phone. She are very happy with it.", "output": "Last week my sister bought a new phone. She is very happy with it."},
+  {"input": "I want to by some vegetables from the market.", "output": "I want to buy some vegetables from the market."},
+  {"input": "We reached the airport at six.", "output": "We reached the airport at six."}
+]

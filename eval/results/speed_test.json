@@ -1,0 +1,32 @@
+{
+  "hi-IN": {
+    "clips": 10,
+    "google_median_ms": 1600,
+    "ours_median_ms": 368,
+    "ours_faster_clips": 10,
+    "google_wer": 0.1948,
+    "ours_wer": 0.0899,
+    "rules_median_ms": 1,
+    "llm_median_ms": 1966
+  },
+  "mr-IN": {
+    "clips": 10,
+    "google_median_ms": 1726,
+    "ours_median_ms": 351,
+    "ours_faster_clips": 10,
+    "google_wer": 0.2582,
+    "ours_wer": 0.1374,
+    "rules_median_ms": 0,
+    "llm_median_ms": 1840
+  },
+  "pa-IN": {
+    "clips": 10,
+    "google_median_ms": 1532,
+    "ours_median_ms": 220,
+    "ours_faster_clips": 10,
+    "google_wer": 0.2574,
+    "ours_wer": 0.1519,
+    "rules_median_ms": 0,
+    "llm_median_ms": null
+  }
+}

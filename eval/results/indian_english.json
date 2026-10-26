@@ -1,0 +1,72 @@
+{
+  "google:en-US": {
+    "wer": 0.1299,
+    "cer": 0.0729,
+    "missed": 0.0371,
+    "median_ms": 1438,
+    "clips": 60
+  },
+  "google:en-IN": {
+    "wer": 0.1299,
+    "cer": 0.0729,
+    "missed": 0.0371,
+    "median_ms": 1337,
+    "clips": 60
+  },
+  "whisper:large-v3-turbo": {
+    "wer": 0.0568,
+    "cer": 0.0297,
+    "missed": 0.0023,
+    "median_ms": 5446,
+    "clips": 60
+  },
+  "whisper:large-v3-turbo:verbatim": {
+    "wer": 0.0603,
+    "cer": 0.0346,
+    "missed": 0.0046,
+    "median_ms": 5707,
+    "clips": 60
+  },
+  "mlx:large-v3": {
+    "wer": 0.0406,
+    "cer": 0.0228,
+    "missed": 0.0035,
+    "median_ms": 3247,
+    "clips": 60
+  },
+  "mlx:large-v3:verbatim": {
+    "wer": 0.0441,
+    "cer": 0.0246,
+    "missed": 0.0035,
+    "median_ms": 3508,
+    "clips": 60
+  },
+  "mlx:large-v3-turbo": {
+    "wer": 0.0464,
+    "cer": 0.0246,
+    "missed": 0.0023,
+    "median_ms": 1842,
+    "clips": 60
+  },
+  "mlx:large-v3-turbo:fast": {
+    "wer": 0.0487,
+    "cer": 0.0265,
+    "missed": 0.0023,
+    "median_ms": 946,
+    "clips": 60
+  },
+  "parakeet:v2": {
+    "wer": 0.1044,
+    "cer": 0.0643,
+    "missed": 0.0035,
+    "median_ms": 191,
+    "clips": 60
+  },
+  "parakeet:v3": {
+    "wer": 0.094,
+    "cer": 0.0599,
+    "missed": 0.0023,
+    "median_ms": 204,
+    "clips": 60
+  }
+}
